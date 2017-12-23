@@ -8,16 +8,16 @@ from PyKDL import *
 
 
 fetch_chain = Chain()
-fetch_chain.addSegment(Segment(Joint(JointType.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
-fetch_chain.addSegment(Segment(Joint(JointType.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0, -0.19, 0.3))))
-fetch_chain.addSegment(Segment(Joint(JointType.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0, 0, 0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotZ), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotX), Frame(Rotation.RPY(0, 0, 0), Vector(0.19, 0, 0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0, 0, 0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotX), Frame(Rotation.RPY(0, 0, 0), Vector(0.28, 0, 0))))
-fetch_chain.addSegment(Segment(Joint(JointType.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0.06, 0.03, 0))))
-fetch_chain.addSegment(Segment(Joint(JointType.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0.05, 0.0, 0.0))))
+fetch_chain.addSegment(Segment(Joint(Joint.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
+fetch_chain.addSegment(Segment(Joint(Joint.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0, -0.19, 0.3))))
+fetch_chain.addSegment(Segment(Joint(Joint.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0, 0, 0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotZ), Frame(Rotation.RPY(0, 0, 0), Vector(0.0, 0.0, 0.0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotX), Frame(Rotation.RPY(0, 0, 0), Vector(0.19, 0, 0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0, 0, 0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotX), Frame(Rotation.RPY(0, 0, 0), Vector(0.28, 0, 0))))
+fetch_chain.addSegment(Segment(Joint(Joint.RotY), Frame(Rotation.RPY(0, 0, 0), Vector(0.06, 0.03, 0))))
+fetch_chain.addSegment(Segment(Joint(Joint.NoJoint), Frame(Rotation.RPY(0, 0, 0), Vector(0.05, 0.0, 0.0))))
 
 print("use fk and ik in module derectly ! ")
 
@@ -52,7 +52,7 @@ for i in range(6):
     q_max[i] = 3
 
 
-ik_p_kdl = ChainIkSolverPos_NR_JL(fetch_chain, q_min, q_max, fk_kdl, ik_v_kdl, 100, 1e-6)
+ik_p_kdl = ChainIkSolverPos_NR_JL(fetch_chain, q_min, q_max, fk_kdl, ik_v_kdl)
 
 
 p0 = Frame()

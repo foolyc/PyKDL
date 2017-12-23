@@ -1,0 +1,5 @@
+project(python_orocos_kdl)
+include_directories(${Boost_INCLUDE_DIRS} /usr/include/python3.5m /opt/ros/kinetic/include /usr/local/include/eigen3)
+add_library(PyKDL SHARED PyKDL.cpp)
+set_target_properties(PyKDL PROPERTIES PREFIX "")
+target_link_libraries(PyKDL ${Boost_LIBRARIES} /opt/ros/kinetic/lib/liborocos-kdl.so)

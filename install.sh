@@ -1,4 +1,3 @@
-cp python_orocos_kdl/CMakeLists.ros.txt python_orocos_kdl/CMakeLists.txt 
 mkdir build
 cd build/
 cmake ..
@@ -10,4 +9,3 @@ python3 ../../test.py
 
 cd ../..
 sudo rm -rf build/
-sudo rm python_orocos_kdl/CMakeLists.txt

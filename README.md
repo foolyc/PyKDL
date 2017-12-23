@@ -22,6 +22,5 @@ use demo
 
 # tips
 
-- just a basic bindings for KDL use in python3, default parameter/function overload/data type converting have not been processed.
-- besides, Joint.None is changed to Joint.NoJoint.
+- Joint.None is changed to Joint.NoJoint.
 - fk and ik can be used as a function as the module without any solver established in python level.

@@ -1,4 +1,4 @@
-As the original PyKDL is usually used in python2 with ros, so i got a naive python3 binding for kdl lib in ros with boost.python.
+As the original PyKDL is usually used in python2 with ros, so i wrapper KDL with python3.5 for personal use.
 
 # Requirement
 
@@ -24,3 +24,5 @@ use demo
 
 - Joint.None is changed to Joint.NoJoint.
 - fk and ik can be used as a function as the module without any solver established in python level.
+
+other APIs are almost the same with the original one.
